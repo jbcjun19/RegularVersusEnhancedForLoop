@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -26,7 +27,7 @@ public class Main {
         }
 
         // #2 Create another String array
-        // Can we population it using an enhanced for-loop?
+        // Can we populate it using an enhanced for-loop?
         // Hold onto your answer. Let's check it
         String[] strArray2 = new String[3];
 
@@ -58,6 +59,9 @@ public class Main {
         for (String word : strArray2) {
             System.out.println("The color is " + word);
         }
+
+        // Simpler print option
+        System.out.println(Arrays.toString(strArray2));
 
     }
 
