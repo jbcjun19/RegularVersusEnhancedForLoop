@@ -18,25 +18,46 @@ public class Main {
         }
         // This print statement will print the memory address of the array
         System.out.println(strArray);
+
         // We need a loop to print one item inside an array at a time
+        // This shorthand is called an enhanced for-loop.
         for (String word : strArray) {
-            System.out.println("The fruit of today is " + word);
+            System.out.println("The fruit is " + word);
         }
 
-
         // #2 Create another String array
-        // This time we will populate it using an enhanced for-loop
+        // Can we population it using an enhanced for-loop?
+        // Hold onto your answer. Let's check it
         String[] strArray2 = new String[3];
 
         for (String word : strArray2) {
             System.out.println("Enter a new word"); // red, blue, yellow
             word = input.nextLine();
         }
+        // printing...
+        for (String word : strArray2) {
+            System.out.println("The color is " + word);
+        }
 
         /*
-        * On your own, create a loop below that will print out
-        * the contents of strArray2
+        * When you print strArray2, notice how you get "null".
+        *
+        * "word" in line 34 is grayed out because it's not being used.
+        * "word" reads in the users input but never saves it to the array.
+        *
+        * The answer from the earlier question is:
+        * No, we can't populate the array using an enhanced for-loop.
+        *
+        * Let's try again with a regular for-loop
         * */
+        for (int i=0; i < strArray2.length; i++) {
+            System.out.println("Enter a new word. This time I'll save it, I promise"); // red, blue, yellow
+            strArray2[i] = input.nextLine();
+        }
+        // Print to check
+        for (String word : strArray2) {
+            System.out.println("The color is " + word);
+        }
 
     }
 
